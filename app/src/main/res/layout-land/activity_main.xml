@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".ui.activities.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenInsta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/colorWhite" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Switch
+        android:id="@+id/switchSaver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:switchPadding="8dp"
+        android:text="@string/saver_switch_text"
+        android:textColor="@color/colorWhite"
+        android:trackTint="@color/colorAccentTrans"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOpenInsta"
+        app:layout_constraintEnd_toStartOf="@+id/btnOpenInsta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnOpenInsta" />
+
+    <Button
+        android:id="@+id/btnOpenInsta"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/colorAccentTrans"
+        android:onClick="openInstaBtnClicked"
+        android:text="@string/instagram_text"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnChoosePath"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/switchSaver" />
+
+    <Button
+        android:id="@+id/btnChoosePath"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:onClick="onChoosePathClicked"
+        android:text="@string/choose_path_text"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOpenInsta"
+        app:layout_constraintCircleRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnOpenInsta"
+        app:layout_constraintTop_toTopOf="@+id/btnOpenInsta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

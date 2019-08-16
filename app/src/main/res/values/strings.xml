@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">InstaSaver</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="browser_chooser_text">Choose browser</string>
+    <string name="media_alert_dialog_title">Delete</string>
+    <string name="media_alert_dialog_message">Are you sure you want to delete THIS</string>
+    <string name="media_alert_dialog_positive_btn_text">Yes</string>
+    <string name="photo_deleted_message">Photo deleted</string>
+    <string name="photo_doesnt_exist_message">Photo doesn\'t exist</string>
+    <string name="media_alert_dialog_negative_btn_text">No</string>
+    <string name="is_photo_text">photo?</string>
+    <string name="is_video_text">video?</string>
+    <string name="video_deleted_message">Video deleted</string>
+    <string name="video_doesnt_exist_message">Video doesn\'t exist</string>
+    <string name="delete_all_media">Delete all</string>
+    <string name="persistence_notification_title">Waiting…</string>
+    <string name="persistence_notification_text">Please copy link</string>
+    <string name="downloading_notification_title">Download</string>
+    <string name="downloading_notification_text">Download in progress</string>
+    <string name="permission_alert_dialog_title">Permission needed</string>
+    <string name="permission_alert_dialog_message">Please allow this permission this application can\'t work properly without this</string>
+    <string name="permission_denied_message">Permission denied</string>
+    <string name="never_ask_again_message">Never asking again</string>
+    <string name="all_media_deleted_message">All media deleted</string>
+    <string name="delete_all_warning_message">Are you sure you want to delete ALL media?</string>
+    <string name="delete_all_dialog_title">Delete ALL media</string>
+    <string name="cd_message_your_downloaded_media">Your downloaded media</string>
+    <string name="saver_switch_text">Saver switch</string>
+    <string name="instagram_text">Instagram</string>
+    <string name="choose_path_text">Choose Path</string>
+    <string name="cd_message_opened_media">Opened media</string>
+    <string name="play_button">Play_button</string>
+    <string name="media_already_exists_message">This media already exists</string>
+</resources>
