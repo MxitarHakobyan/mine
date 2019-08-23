@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initTab() {
-        // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         mBtnInst = findViewById(R.id.btnOpenInsta);
         mBtnInst.setEnabled(false);
@@ -185,9 +184,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this, getResources().getString(R.string.never_ask_again_message), Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * @Callback this is callback method on choose path button
-     */
     public void onChoosePathClicked(View view) {
         Button btnPath = view.findViewById(R.id.btnChoosePath);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_btn_touch);
@@ -206,15 +202,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.deleteAll) {
-            showAlertDialogIsDelete();
+            showAlertDialogIsDeleteAll();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * showing dialog it informs that all media will detele
-     */
-    private void showAlertDialogIsDelete() {
+    private void showAlertDialogIsDeleteAll() {
         new AlertDialog.Builder(this)
                 .setTitle(getResources().getString(R.string.delete_all_dialog_title))
                 .setMessage(getResources().getString(R.string.delete_all_warning_message))

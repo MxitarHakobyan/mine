@@ -72,7 +72,7 @@ public class PathManager {
      * @Example https://www.instagram.com/p/`data shortcode`/?utm_source=ig_web_copy_link
      * @Example https://www.instagram.com/p/??/?igshid=2aiw8lapdlhr
      */
-    public synchronized static String getShortCodeFromUrl(String url) {
+    public static String getShortCodeFromUrl(String url) {
         if (url.contains(BASE_INSTAGRAM_URL)) {
             String[] parts = url.split("/");
             if (parts[SHORT_CODE_PERSISTENCE_INDEX].length() == SHORT_CODE_LENGTH) {
@@ -90,7 +90,7 @@ public class PathManager {
     /**
      * @return returns String, path that is saved in shared pref
      */
-    private synchronized static String getDownloadFolder() {
+    private static String getDownloadFolder() {
         return mDownloadFolder;
     }
 
@@ -99,7 +99,7 @@ public class PathManager {
      *
      * @param aFolder path that is chosen by user
      */
-    public synchronized static void setDownloadFolder(String aFolder) {
+    public static void setDownloadFolder(String aFolder) {
         PathManager.mDownloadFolder = aFolder;
     }
 }

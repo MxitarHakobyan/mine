@@ -41,6 +41,10 @@ public class Post {
         return mTypeName;
     }
 
+    public String getShortCode() {
+        return mShortCode;
+    }
+
     public String getTypeFormat() {
         return isVideo() ? Constants.VIDEO_TYPE : Constants.IMAGE_TYPE;
     }

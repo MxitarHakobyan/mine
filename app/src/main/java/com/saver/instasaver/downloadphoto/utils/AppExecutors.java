@@ -3,12 +3,14 @@ package com.saver.instasaver.downloadphoto.utils;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.annotation.NonNull;
+
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class AppExecutors {
     private static final Object LOCK = new Object();
-    private static AppExecutors sInstance;
+    private static volatile AppExecutors sInstance;
     private final Executor diskIO;
     private final Executor networkIO;
     private final Executor mainThread;
@@ -23,7 +25,7 @@ public class AppExecutors {
         if (sInstance == null) {
             synchronized (LOCK) {
                 if (sInstance == null) {
-                    return new AppExecutors(Executors.newSingleThreadExecutor(), Executors.newFixedThreadPool(4), new MainThreadExecutor());
+                    return new AppExecutors(Executors.newSingleThreadExecutor(), Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors()), new MainThreadExecutor());
                 }
             }
         }
@@ -47,7 +49,7 @@ public class AppExecutors {
         private Handler mHandler = new Handler(Looper.getMainLooper());
 
         @Override
-        public void execute(Runnable command) {
+        public void execute(@NonNull Runnable command) {
             mHandler.post(command);
         }
     }

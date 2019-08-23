@@ -18,13 +18,6 @@ import static android.content.Context.NOTIFICATION_SERVICE;
 
 public class NotificationHelper {
 
-    /**
-     * creating persistence notification for foreground service
-     *
-     * @param context service's context
-     * @return returns notification builder
-     * @! it used by executors
-     */
     public static NotificationCompat.Builder getPersistenceNotification(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
         intent.putExtra(Constants.EXTRA_SWITCH_STATE, true);
@@ -38,13 +31,6 @@ public class NotificationHelper {
                 .setOnlyAlertOnce(true)
                 .setContentIntent(pendingIntent);
     }
-
-    /**
-     * creting notification channels for downloading and foreground service
-     *
-     * @param context services's context
-     * @! it's for all application
-     */
 
     public static void createNotificationChannel(Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

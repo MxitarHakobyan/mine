@@ -10,7 +10,6 @@ public class Constants {
     public static final String CHANNEL_PERSISTENCE_ID = "persistenceSaverChannel";
     public static final String CHANNEL_DOWNLOADING_ID = "downloadingChannel";
 
-    public static final String EXTRA_NOT_ID = "notId";
     public static final String EXTRA_SWITCH_STATE = "state";
 
     public static final String VIDEO_TYPE = ".mp4";
@@ -21,5 +20,4 @@ public class Constants {
     public static final String LAST_POSITION_KEY = "pos";
     public static final String MEDIA_LIST_KEY = "media";
 
-    public static final int PROGRESS_MAX = 100;
 }
